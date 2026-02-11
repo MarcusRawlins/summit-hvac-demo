@@ -49,36 +49,42 @@ export default function Home() {
       title: "AC Repair",
       description:
         "Fast, reliable air conditioning repairs to restore your comfort. Same-day service available.",
+      image: "https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?w=600&q=80",
     },
     {
       icon: Flame,
       title: "Heating Services",
       description:
         "Furnace and heat pump repairs, maintenance, and installations to keep you warm all winter.",
+      image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80",
     },
     {
       icon: Fan,
       title: "System Installation",
       description:
         "Expert installation of new HVAC systems with top brands and energy-efficient options.",
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
     },
     {
       icon: CalendarCheck,
       title: "Maintenance Plans",
       description:
         "Preventive maintenance programs to extend equipment life and prevent costly breakdowns.",
+      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80",
     },
     {
       icon: Thermometer,
       title: "Indoor Air Quality",
       description:
         "Air purifiers, humidifiers, and filtration systems for healthier indoor air.",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
     },
     {
       icon: Zap,
       title: "Emergency Service",
       description:
         "24/7 emergency HVAC repairs when you need us most. No extra charge for after-hours calls.",
+      image: "https://images.unsplash.com/photo-1581141849291-1125c7b692b8?w=600&q=80",
     },
   ];
 
@@ -88,18 +94,21 @@ export default function Home() {
       location: "Short Pump",
       rating: 5,
       text: "Our AC died on the hottest day of the year. Summit had a tech here within 2 hours and got us back up and running. The price was fair and the service was exceptional. Highly recommend!",
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80",
     },
     {
       name: "David Patterson",
       location: "Midlothian",
       rating: 5,
       text: "We used Summit for a complete system replacement. They helped us choose the right size unit, handled all permits, and the install team was professional and clean. Five stars all around.",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
     },
     {
       name: "Linda Chen",
       location: "Glen Allen",
       rating: 5,
       text: "Been on their maintenance plan for two years now. They always call to schedule, show up on time, and my 15-year-old system is still running strong. Great preventive care!",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80",
     },
   ];
 
@@ -212,27 +221,37 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-slate-50 via-sky-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Background Image */}
+      <section className="relative pt-16 min-h-[90vh] flex items-center">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1631545806609-2ab7b3ab7ebc?w=1920&q=80"
+            alt="Modern comfortable home interior"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center bg-sky-500/20 backdrop-blur-sm text-sky-300 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-sky-500/30">
                 <BadgeCheck className="h-4 w-4 mr-2" />
                 Licensed & Insured • Serving Richmond Since 2005
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
                 Comfort You Can{" "}
-                <span className="text-sky-600">Count On</span>
+                <span className="text-sky-400">Count On</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 From emergency AC repairs to complete system installations, Summit HVAC Solutions delivers reliable, expert service to keep your home comfortable year-round. Serving the Richmond metro area 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact">
                   <Button
                     size="lg"
-                    className="bg-sky-600 hover:bg-sky-700 text-lg px-8 w-full sm:w-auto"
+                    className="bg-sky-500 hover:bg-sky-600 text-lg px-8 w-full sm:w-auto"
                   >
                     <CalendarCheck className="h-5 w-5 mr-2" />
                     Schedule Service
@@ -242,14 +261,14 @@ export default function Home() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-sky-600 text-sky-600 hover:bg-sky-50 text-lg px-8 w-full sm:w-auto"
+                    className="border-white/30 text-white hover:bg-white/10 text-lg px-8 w-full sm:w-auto"
                   >
                     <Phone className="h-5 w-5 mr-2" />
                     Get Free Estimate
                   </Button>
                 </a>
               </div>
-              <div className="flex items-center gap-6 mt-8 pt-8 border-t border-gray-200">
+              <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/20">
                 <div className="flex items-center">
                   <div className="flex -space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -259,49 +278,49 @@ export default function Home() {
                       />
                     ))}
                   </div>
-                  <span className="ml-2 font-semibold">4.9/5</span>
+                  <span className="ml-2 font-semibold text-white">4.9/5</span>
                 </div>
-                <span className="text-gray-300">|</span>
-                <span className="text-gray-600">850+ Reviews</span>
-                <span className="text-gray-300">|</span>
-                <span className="text-gray-600">15,000+ Jobs</span>
+                <span className="text-white/40">|</span>
+                <span className="text-gray-300">850+ Reviews</span>
+                <span className="text-white/40">|</span>
+                <span className="text-gray-300">15,000+ Jobs</span>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-sky-500 to-blue-700 rounded-2xl p-8 text-white">
+            <div className="hidden md:block">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-white border border-white/20">
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-4">
-                    <Zap className="h-10 w-10" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-sky-500/30 rounded-full mb-4">
+                    <Zap className="h-10 w-10 text-sky-300" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">24/7 Emergency Service</h3>
-                  <p className="text-sky-100">
+                  <p className="text-sky-200">
                     When your comfort can&apos;t wait, neither do we.
                   </p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center bg-white/10 rounded-lg p-4">
-                    <Clock className="h-6 w-6 mr-3 flex-shrink-0" />
+                    <Clock className="h-6 w-6 mr-3 flex-shrink-0 text-sky-300" />
                     <div>
                       <p className="font-semibold">Same-Day Service</p>
-                      <p className="text-sm text-sky-100">
+                      <p className="text-sm text-sky-200">
                         Most calls answered within 2 hours
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center bg-white/10 rounded-lg p-4">
-                    <Shield className="h-6 w-6 mr-3 flex-shrink-0" />
+                    <Shield className="h-6 w-6 mr-3 flex-shrink-0 text-sky-300" />
                     <div>
                       <p className="font-semibold">100% Satisfaction</p>
-                      <p className="text-sm text-sky-100">
+                      <p className="text-sm text-sky-200">
                         Guaranteed workmanship on every job
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center bg-white/10 rounded-lg p-4">
-                    <Award className="h-6 w-6 mr-3 flex-shrink-0" />
+                    <Award className="h-6 w-6 mr-3 flex-shrink-0 text-sky-300" />
                     <div>
                       <p className="font-semibold">Upfront Pricing</p>
-                      <p className="text-sm text-sky-100">
+                      <p className="text-sm text-sky-200">
                         No hidden fees or surprise charges
                       </p>
                     </div>
@@ -337,7 +356,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section with Images */}
       <section id="services" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -352,12 +371,20 @@ export default function Home() {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-shadow duration-300 border-gray-200"
+                className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-gray-200"
               >
-                <CardContent className="p-6">
-                  <div className="bg-sky-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:bg-sky-600 transition-colors">
-                    <service.icon className="h-7 w-7 text-sky-600 group-hover:text-white transition-colors" />
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 bg-sky-500 p-3 rounded-lg">
+                    <service.icon className="h-6 w-6 text-white" />
                   </div>
+                </div>
+                <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h3>
@@ -376,12 +403,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section with Team Image */}
       <section id="about" className="py-16 md:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <span className="text-sky-600 font-semibold text-sm uppercase tracking-wider">About Us</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-2">
                 Richmond&apos;s Trusted HVAC Experts Since 2005
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -410,56 +438,56 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm flex items-start">
-                <div className="bg-green-100 p-3 rounded-lg mr-4 flex-shrink-0">
-                  <Shield className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    Licensed & Insured
-                  </h3>
-                  <p className="text-gray-600">
-                    Fully licensed, bonded, and insured in Virginia for your complete peace of mind.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm flex items-start">
-                <div className="bg-sky-100 p-3 rounded-lg mr-4 flex-shrink-0">
-                  <Award className="h-6 w-6 text-sky-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    Quality Guaranteed
-                  </h3>
-                  <p className="text-gray-600">
-                    All work backed by our 100% satisfaction guarantee and manufacturer warranties.
-                  </p>
+              {/* Team Image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
+                  alt="HVAC technician team at work"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="font-semibold text-lg">Our Expert Team</p>
+                  <p className="text-sky-200 text-sm">NATE Certified Professionals</p>
                 </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm flex items-start">
-                <div className="bg-amber-100 p-3 rounded-lg mr-4 flex-shrink-0">
-                  <Star className="h-6 w-6 text-amber-600" />
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white p-5 rounded-xl shadow-sm flex items-start">
+                  <div className="bg-green-100 p-2 rounded-lg mr-3 flex-shrink-0">
+                    <Shield className="h-5 w-5 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-sm">Licensed & Insured</h3>
+                    <p className="text-gray-500 text-xs mt-1">Full coverage for your peace of mind</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    5-Star Rated
-                  </h3>
-                  <p className="text-gray-600">
-                    Consistently rated 5 stars on Google, Yelp, and the Better Business Bureau.
-                  </p>
+                <div className="bg-white p-5 rounded-xl shadow-sm flex items-start">
+                  <div className="bg-sky-100 p-2 rounded-lg mr-3 flex-shrink-0">
+                    <Award className="h-5 w-5 text-sky-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-sm">Quality Guaranteed</h3>
+                    <p className="text-gray-500 text-xs mt-1">100% satisfaction promise</p>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm flex items-start">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4 flex-shrink-0">
-                  <Wrench className="h-6 w-6 text-blue-600" />
+                <div className="bg-white p-5 rounded-xl shadow-sm flex items-start">
+                  <div className="bg-amber-100 p-2 rounded-lg mr-3 flex-shrink-0">
+                    <Star className="h-5 w-5 text-amber-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-sm">5-Star Rated</h3>
+                    <p className="text-gray-500 text-xs mt-1">Top reviews on Google & Yelp</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    All Major Brands
-                  </h3>
-                  <p className="text-gray-600">
-                    We service and install Carrier, Trane, Lennox, Rheem, and more.
-                  </p>
+                <div className="bg-white p-5 rounded-xl shadow-sm flex items-start">
+                  <div className="bg-blue-100 p-2 rounded-lg mr-3 flex-shrink-0">
+                    <Wrench className="h-5 w-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-sm">All Major Brands</h3>
+                    <p className="text-gray-500 text-xs mt-1">Carrier, Trane, Lennox & more</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -467,11 +495,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section with Avatar Photos */}
       <section id="testimonials" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <span className="text-sky-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 mt-2">
               What Our Customers Say
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -480,7 +509,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-gray-200">
+              <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -494,11 +523,11 @@ export default function Home() {
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-sky-600 font-semibold text-lg">
-                        {testimonial.name[0]}
-                      </span>
-                    </div>
+                    <img 
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover mr-4"
+                    />
                     <div>
                       <p className="font-semibold text-gray-900">
                         {testimonial.name}
@@ -539,7 +568,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <span className="text-sky-600 font-semibold text-sm uppercase tracking-wider">Contact Us</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-2">
                 Get Your Free Estimate
               </h2>
               <p className="text-lg text-gray-600 mb-8">
@@ -599,7 +629,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <Card className="border-gray-200">
+              <Card className="border-gray-200 shadow-lg">
                 <CardContent className="p-6">
                   {formSubmitted ? (
                     <div className="text-center py-8">
